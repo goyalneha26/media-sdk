@@ -4,19 +4,18 @@
     "rootDir": "./src",
     "outDir": "./dist",
 
+    "target": "ES2022",
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
-    "target": "ESNext",
 
     "declaration": true,
     "declarationMap": true,
+    "sourceMap": true,
 
     "strict": true,
     "verbatimModuleSyntax": true,
     "isolatedModules": true,
-    "skipLibCheck": true,
-
-    "sourceMap": true
+    "skipLibCheck": true
   },
   "include": [
     "src/**/*.ts"
