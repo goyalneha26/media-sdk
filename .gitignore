@@ -8,4 +8,4 @@ npm-debug.log*
 .DS_Store
 .vscode/
 .idea/
-*.tsbuildinfo
+*.tsbuildinfopackages/*/tsconfig.tsbuildinfo
