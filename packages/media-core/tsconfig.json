@@ -3,15 +3,20 @@
     "composite": true,
     "rootDir": "./src",
     "outDir": "./dist",
-    "module": "nodenext",
-    "moduleResolution": "nodenext",
-    "target": "esnext",
+
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "target": "ESNext",
+
     "declaration": true,
     "declarationMap": true,
+
     "strict": true,
     "verbatimModuleSyntax": true,
     "isolatedModules": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+
+    "sourceMap": true
   },
   "include": [
     "src/**/*.ts"
