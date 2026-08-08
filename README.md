@@ -1,35 +1,95 @@
 # Media SDK
 
-A modular, TypeScript-based Media SDK for building modern media applications with reusable core services, Pexels-powered media search, React bindings, React UI components, and React Native support.
+A modular, TypeScript-first Media SDK ecosystem for building modern media applications with reusable core services, platform wrappers, headless UI components, and a React demo application powered by the Pexels API.
 
-## ✨ Features
+## 🔗 Project Links
 
-* 🔎 Media search using the Pexels API
-* 🎬 Media player and playback management
-* 📊 Analytics and media events
-* ⚡ Adaptive Bitrate (ABR) and quality management
-* 💾 Media caching and buffering
-* 🌐 Network monitoring
-* 🔐 Authentication management
-* 🛡️ Error handling and recovery
-* ⚛️ React hooks and `MediaProvider`
-* 🎨 Reusable React UI components
-* 📱 React Native support
-* 📦 Modular workspace-based package architecture
-* 🔷 TypeScript-first API with generated type definitions
+* **GitHub:** https://github.com/goyalneha26/media-sdk
+* **Live Demo:** https://media-sdk-media-app.vercel.app
+* **Vercel Project:** https://vercel.com/me-699c/media-sdk-media-app
 
 ---
 
-## 📦 Packages
+## ✨ Features
 
-The SDK is organized into independent packages.
+* 🔎 Pexels-powered photo and video search
+* 📄 Pagination and load-more support
+* 🎬 Media player and playback management
+* 📊 Analytics and media activity events
+* ⚡ Adaptive bitrate and quality management
+* 💾 In-memory caching and buffering
+* 🌐 Network monitoring
+* 🔐 API key authentication/configuration
+* 🛡️ Error handling and recovery
+* ⚛️ React provider and hooks
+* 🎨 Headless React UI components
+* 📱 React Native bindings
+* 📦 npm workspace-based monorepo architecture
+* 🔷 TypeScript-first APIs with generated declaration files
 
-### `@media-sdk/core`
+---
 
-The main SDK engine containing the core media functionality.
+# 🏗️ Architecture
 
-Includes:
+The project is intentionally separated into four layers:
 
+```text
+                         ┌─────────────────────┐
+                         │     media-app       │
+                         │    React Demo       │
+                         └──────────┬──────────┘
+                                    │
+                   ┌────────────────┴────────────────┐
+                   │                                 │
+                   ▼                                 ▼
+          ┌─────────────────┐              ┌──────────────────┐
+          │   media-react   │              │  media-ui-react  │
+          │ Platform Wrapper│              │   Pure UI Layer  │
+          └────────┬────────┘              └──────────────────┘
+                   │
+                   ▼
+          ┌─────────────────┐
+          │   media-core    │
+          │ Framework-free  │
+          │ TypeScript SDK  │
+          └─────────────────┘
+```
+
+The dependency direction is:
+
+```text
+app → media-react → media-core
+app → media-ui-react
+```
+
+The following boundaries are intentionally enforced:
+
+* `media-core` does not import React, React Native, or UI components.
+* `media-react` only adapts `media-core` to React.
+* `media-native` only adapts `media-core` to React Native.
+* `media-ui-react` does not import `media-core` or any platform wrapper.
+* `media-ui-native` does not import `media-core` or any platform wrapper.
+* UI components receive data and callbacks through props.
+* The application is responsible for connecting SDK data to UI components.
+
+This allows the core SDK to theoretically be consumed by a CLI, another framework, or another application without changing the core implementation.
+
+---
+
+# 📦 Packages
+
+## `@media-sdk/core`
+
+Framework-agnostic TypeScript SDK containing the core media functionality.
+
+### Includes
+
+* Pexels API client
+* Search
+* Curated media retrieval
+* Pagination
+* Single-item retrieval
+* Authentication/configuration
 * Media player
 * Playlist management
 * Media sources
@@ -37,18 +97,20 @@ Includes:
 * Cache management
 * Network monitoring
 * Analytics
-* Authentication
+* Event emitter
 * Error handling
 * Recovery management
 * Quality management
 * Adaptive bitrate control
-* Pexels API client
-* Event emitter
-* Type definitions
+* Typed media contracts
 
-### `@media-sdk/react`
+The core package contains **no React, DOM, or React Native dependencies**.
 
-React bindings for the Media SDK.
+---
+
+## `@media-sdk/react`
+
+React bindings around `@media-sdk/core`.
 
 Provides:
 
@@ -56,9 +118,27 @@ Provides:
 * `useMediaSearch`
 * `useMediaEvents`
 
-### `@media-sdk/ui-react`
+The React package contains adapter logic only and does not implement independent media business logic.
 
-Reusable React UI components.
+---
+
+## `@media-sdk/native`
+
+React Native bindings around `@media-sdk/core`.
+
+Provides:
+
+* `MediaProvider`
+* `useMediaSearch`
+* `useMediaEvents`
+
+The native wrapper follows the same SDK contract while adapting it to React Native.
+
+---
+
+## `@media-sdk/ui-react`
+
+Headless React UI component library.
 
 Provides:
 
@@ -66,19 +146,47 @@ Provides:
 * `Lightbox`
 * `ReelSwiper`
 
-### `@media-sdk/native`
+The components are independent of the SDK and receive data through props.
 
-React Native bindings for mobile applications.
+They do not know about:
 
-Provides:
+* Pexels
+* `media-core`
+* `media-react`
+* API authentication
+* SDK caching
 
-* `MediaProvider`
-* `useMediaSearch`
-* `useMediaEvents`
+No application-specific styles are shipped by the component library. Consumers control markup, styling, and presentation.
 
 ---
 
-## 🏗️ Architecture
+## `@media-sdk/ui-native`
+
+React Native headless UI component library.
+
+Provides platform-specific implementations of:
+
+* Grid
+* Lightbox
+* Reel Swiper
+
+Like the React UI package, it remains independent from the SDK core and platform wrappers.
+
+---
+
+# 🛠️ Tech Stack
+
+* TypeScript
+* React
+* React Native
+* Vite
+* Pexels API
+* npm Workspaces
+* Node.js
+
+---
+
+# 📁 Project Structure
 
 ```text
 media-sdk/
@@ -105,18 +213,30 @@ media-sdk/
 │   │   ├── hooks/
 │   │   └── context
 │   │
+│   ├── media-native/
+│   │   ├── MediaProvider
+│   │   └── hooks/
+│   │
 │   ├── media-ui-react/
 │   │   └── components/
 │   │       ├── Grid/
 │   │       ├── Lightbox/
 │   │       └── ReelSwiper/
 │   │
-│   ├── media-native/
-│   │   ├── MediaProvider
-│   │   └── hooks/
+│   ├── media-ui-native/
+│   │   └── components/
+│   │       ├── Grid/
+│   │       ├── Lightbox/
+│   │       └── ReelSwiper/
 │   │
 │   └── media-app/
 │       └── Demo application
+│
+├── skills/
+│   ├── wiring-data/
+│   │   └── SKILL.md
+│   └── using-components/
+│       └── SKILL.md
 │
 ├── package.json
 ├── tsconfig.json
@@ -125,38 +245,24 @@ media-sdk/
 
 ---
 
-## 🛠️ Tech Stack
+# 🚀 Getting Started
 
-* TypeScript
-* React
-* React Native
-* Vite
-* Pexels API
-* npm Workspaces
-* Node.js
+## Prerequisites
 
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-Make sure you have:
+Install:
 
 * Node.js
 * npm
 * TypeScript
 
-installed on your system.
-
-### Clone the repository
+## Clone
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/goyalneha26/media-sdk.git
 cd media-sdk
 ```
 
-### Install dependencies
+## Install dependencies
 
 ```bash
 npm install
@@ -164,11 +270,11 @@ npm install
 
 ---
 
-## 🔑 Pexels API
+# 🔑 Pexels API Configuration
 
-The Media SDK uses the Pexels API for media search.
+The application uses the Pexels API as its media data source.
 
-Create a Pexels API key and configure it in the application.
+Create a Pexels API key and configure it through the application environment/configuration.
 
 Example:
 
@@ -178,7 +284,9 @@ Example:
 </MediaProvider>
 ```
 
-> Do not commit real API keys to GitHub.
+**Never commit a real API key to GitHub.**
+
+For local development, use the project's environment configuration where applicable.
 
 ---
 
@@ -190,7 +298,7 @@ Install the React package:
 npm install @media-sdk/react
 ```
 
-Then wrap your application with `MediaProvider`.
+Configure the provider:
 
 ```tsx
 import { MediaProvider } from "@media-sdk/react";
@@ -198,19 +306,17 @@ import { MediaProvider } from "@media-sdk/react";
 function App() {
   return (
     <MediaProvider apiKey="YOUR_PEXELS_API_KEY">
-      {/* Your application */}
+      <Application />
     </MediaProvider>
   );
 }
-
-export default App;
 ```
 
 ---
 
-## 🔎 Media Search
+# 🔎 Media Search
 
-Use `useMediaSearch` to search for photos.
+The `useMediaSearch` hook exposes media search state and operations.
 
 ```tsx
 import { useMediaSearch } from "@media-sdk/react";
@@ -236,9 +342,7 @@ function SearchComponent() {
       {loading && <p>Searching...</p>}
 
       {error && (
-        <p>
-          {String(error)}
-        </p>
+        <p>{String(error)}</p>
       )}
 
       {photos.map((photo) => (
@@ -255,17 +359,61 @@ function SearchComponent() {
 
 ---
 
-# 🎨 React UI Components
+# 📊 Media Events
 
-Install the UI package:
+The SDK exposes media activity events through an event emitter.
+
+At minimum, the SDK supports:
+
+* `view`
+* `download`
+
+Applications can subscribe independently to track activity.
+
+Example:
+
+```tsx
+import { useMediaEvents } from "@media-sdk/react";
+
+function Analytics() {
+  useMediaEvents((event) => {
+    console.log("Media event:", event);
+  });
+
+  return null;
+}
+```
+
+The SDK also provides a default event listener for activity logging.
+
+---
+
+# 🎨 Headless React Components
+
+Install:
 
 ```bash
 npm install @media-sdk/ui-react
 ```
 
+The UI package is intentionally headless.
+
+The consumer controls:
+
+* HTML structure
+* CSS
+* layout
+* colors
+* typography
+* spacing
+* media presentation
+* interaction styling
+
+---
+
 ## Grid
 
-The `Grid` component renders a reusable media grid.
+The `Grid` component renders media collections and supports load-more/infinite-scroll behavior.
 
 ```tsx
 import { Grid } from "@media-sdk/ui-react";
@@ -288,11 +436,13 @@ import { Grid } from "@media-sdk/ui-react";
 />
 ```
 
+The Grid does not fetch Pexels data itself. Data and callbacks are supplied by the consumer.
+
 ---
 
-## Lightbox
+# 🖼️ Lightbox
 
-The `Lightbox` component provides a reusable media overlay.
+The Lightbox provides a reusable media overlay.
 
 ```tsx
 import { Lightbox } from "@media-sdk/ui-react";
@@ -314,11 +464,13 @@ import { Lightbox } from "@media-sdk/ui-react";
 </Lightbox>
 ```
 
+The web implementation supports keyboard/focus interaction appropriate for an overlay component.
+
 ---
 
-## ReelSwiper
+# 🎬 ReelSwiper
 
-The `ReelSwiper` component provides horizontally scrollable media content.
+The Reel Swiper provides vertical snap-based media paging with active-item detection.
 
 ```tsx
 import { ReelSwiper } from "@media-sdk/ui-react";
@@ -336,6 +488,8 @@ import { ReelSwiper } from "@media-sdk/ui-react";
   }}
 />
 ```
+
+The component does not know where the media originated. The consumer supplies the media items.
 
 ---
 
@@ -369,11 +523,11 @@ function SearchScreen() {
 
 ---
 
-# 🧪 Consumer Testing
+# 🧪 Consumer Validation
 
-The SDK includes a consumer application used to validate the actual packaged SDK.
+The SDK includes consumer-oriented validation to ensure that the packages can be consumed outside their source workspace implementation.
 
-The packages can be packed locally:
+Packages can be packed locally:
 
 ```bash
 npm pack --workspace @media-sdk/core
@@ -382,31 +536,15 @@ npm pack --workspace @media-sdk/ui-react
 npm pack --workspace @media-sdk/native
 ```
 
-This generates:
+The resulting packages can be installed into a separate consumer application.
 
-```text
-media-sdk-core-1.0.0.tgz
-media-sdk-react-1.0.0.tgz
-media-sdk-ui-react-1.0.0.tgz
-media-sdk-native-1.0.0.tgz
-```
-
-These packages can then be installed into the consumer application:
-
-```bash
-npm install ../media-sdk-core-1.0.0.tgz
-npm install ../media-sdk-react-1.0.0.tgz
-npm install ../media-sdk-ui-react-1.0.0.tgz
-npm install ../media-sdk-native-1.0.0.tgz
-```
-
-The consumer application has been validated with:
+Validation includes:
 
 * Package installation
 * TypeScript compilation
-* Vite production build
-* Pexels API search
-* Photo rendering
+* Production builds
+* Pexels API integration
+* Media rendering
 * Grid interaction
 * Lightbox interaction
 * ReelSwiper interaction
@@ -415,13 +553,13 @@ The consumer application has been validated with:
 
 # 🔨 Development
 
-Install dependencies from the repository root:
+Install dependencies:
 
 ```bash
 npm install
 ```
 
-Build all packages:
+Build the complete workspace:
 
 ```bash
 npm run build
@@ -459,28 +597,95 @@ npm run dev
 
 ---
 
-## AI-Assisted Development
+# 🤖 AI-Assisted Development
 
-AI coding tools were used during development for:
+AI coding tools were explicitly used during development.
 
-- scaffolding package structures
-- TypeScript debugging
-- test generation
-- documentation drafting
-- refactoring suggestions
+AI assistance included:
 
-Architecture decisions, dependency boundaries, SDK contracts,
-and final implementation were reviewed and validated manually.
+* Package scaffolding
+* TypeScript debugging
+* Build and dependency troubleshooting
+* Refactoring suggestions
+* Test/validation suggestions
+* Documentation drafting
+* Architecture review
+* Development workflow assistance
 
-### AI Skills
+Final architecture, package boundaries, API contracts, dependency direction, and implementation were reviewed and validated manually.
 
-Two SKILL.md files were created:
+---
 
-- `skills/media-data-wiring/SKILL.md`
-- `skills/media-components/SKILL.md`
+# 🧠 AI Skills
 
-These were used to guide an AI coding assistant while implementing
-the application layer.
+Two practical skill documents were created for AI coding assistants:
+
+### `skills/wiring-data/SKILL.md`
+
+Guides an AI assistant on:
+
+* `MediaProvider` setup
+* API configuration
+* Search hooks
+* Loading/error states
+* Pagination
+* Media events
+* Connecting SDK data to application state
+
+### `skills/using-components/SKILL.md`
+
+Guides an AI assistant on:
+
+* Grid usage
+* Lightbox usage
+* Reel Swiper usage
+* Headless component patterns
+* Prop-driven data
+* Consumer-owned styling
+* Accessibility expectations
+* Keeping UI components independent from the SDK
+
+These skills were used to guide implementation of the application layer and enforce the intended separation between data wiring and UI composition.
+
+---
+
+# 🎯 Take-Home Design Decisions
+
+The implementation prioritizes clear dependency boundaries and a practical scope.
+
+### Core SDK
+
+The core was kept framework-agnostic so it can theoretically be reused by different clients without React or React Native dependencies.
+
+### Platform wrappers
+
+React and React Native wrappers adapt the same core SDK rather than duplicating business logic.
+
+### UI components
+
+The UI libraries remain independent from the SDK. This allows the components to be used with any compatible media data source, not only Pexels.
+
+### Application
+
+The demo application is responsible for connecting the data layer and presentation layer.
+
+This keeps the application composition layer separate from reusable SDK functionality.
+
+---
+
+# 📌 Scope and Limitations
+
+The project focuses on the architecture and functionality requested by the take-home task.
+
+Where functionality was intentionally scoped, the priority was:
+
+1. Correct package boundaries
+2. Typed SDK contracts
+3. Working Pexels integration
+4. Functional React bindings
+5. Genuine headless UI components
+6. Consumer validation
+7. Practical AI-assisted development workflow
 
 ---
 
@@ -494,4 +699,13 @@ MIT License.
 
 **Neha Goyal**
 
-Built as a modular TypeScript media SDK demonstrating package architecture, API integration, React bindings, reusable UI components, and cross-platform support.
+Built as a modular TypeScript Media SDK demonstrating:
+
+* Framework-agnostic SDK architecture
+* Pexels API integration
+* React and React Native bindings
+* Headless UI components
+* TypeScript package design
+* npm workspace architecture
+* AI-assisted development
+* Reusable media application patterns
