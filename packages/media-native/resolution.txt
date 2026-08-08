@@ -1,0 +1,540 @@
+======== Resolving module 'react' from 'D:/Major Projects/media-sdk/packages/media-native/src/context.ts'. ========
+Explicitly specified module resolution kind: 'Bundler'.
+Resolving in CJS mode with conditions 'import', 'types'.
+'paths' option is specified, looking for a pattern to match module name 'react'.
+File 'D:/Major Projects/media-sdk/packages/media-native/src/package.json' does not exist according to earlier cached lookups.
+File 'D:/Major Projects/media-sdk/packages/media-native/package.json' exists according to earlier cached lookups.
+Loading module 'react' from 'node_modules' folder, target file types: TypeScript, JavaScript, Declaration, JSON.
+Searching all ancestor node_modules directories for preferred extensions: TypeScript, Declaration.
+Directory 'D:/Major Projects/media-sdk/packages/media-native/src/node_modules' does not exist, skipping all lookups in it.
+File 'D:/Major Projects/media-sdk/packages/media-native/node_modules/react.ts' does not exist.
+File 'D:/Major Projects/media-sdk/packages/media-native/node_modules/react.tsx' does not exist.
+File 'D:/Major Projects/media-sdk/packages/media-native/node_modules/react.d.ts' does not exist.
+Directory 'D:/Major Projects/media-sdk/packages/media-native/node_modules/@types' does not exist, skipping all lookups in it.
+Directory 'D:/Major Projects/media-sdk/packages/node_modules' does not exist, skipping all lookups in it.
+Found 'package.json' at 'D:/Major Projects/media-sdk/node_modules/react/package.json'.
+Entering conditional exports.
+Saw non-matching condition 'react-server'.
+Matched 'exports' condition 'default'.
+Using 'exports' subpath '.' with target './index.js'.
+File name 'D:/Major Projects/media-sdk/node_modules/react/index.js' has a '.js' extension - stripping it.
+File 'D:/Major Projects/media-sdk/node_modules/react/index.ts' does not exist.
+File 'D:/Major Projects/media-sdk/node_modules/react/index.tsx' does not exist.
+File 'D:/Major Projects/media-sdk/node_modules/react/index.d.ts' does not exist.
+Failed to resolve under condition 'default'.
+Exiting conditional exports.
+Found 'package.json' at 'D:/Major Projects/media-sdk/node_modules/@types/react/package.json'.
+Entering conditional exports.
+Saw non-matching condition 'types@<=5.0'.
+Matched 'exports' condition 'types'.
+Entering conditional exports.
+Matched 'exports' condition 'default'.
+Using 'exports' subpath '.' with target './index.d.ts'.
+File 'D:/Major Projects/media-sdk/node_modules/@types/react/index.d.ts' exists - use it as a name resolution result.
+Resolved under condition 'default'.
+Exiting conditional exports.
+Resolved under condition 'types'.
+Exiting conditional exports.
+Resolving real path for 'D:/Major Projects/media-sdk/node_modules/@types/react/index.d.ts', result 'D:/Major Projects/media-sdk/node_modules/@types/react/index.d.ts'.
+======== Module name 'react' was successfully resolved to 'D:/Major Projects/media-sdk/node_modules/@types/react/index.d.ts' with Package ID '@types/react/index.d.ts@19.2.18'. ========
+======== Resolving module '@media-sdk/core' from 'D:/Major Projects/media-sdk/packages/media-native/src/context.ts'. ========
+Explicitly specified module resolution kind: 'Bundler'.
+Resolving in CJS mode with conditions 'import', 'types'.
+'paths' option is specified, looking for a pattern to match module name '@media-sdk/core'.
+Module name '@media-sdk/core', matched pattern '@media-sdk/core'.
+Trying substitution '../media-core/dist/index.d.ts', candidate module location: '../media-core/dist/index.d.ts'.
+File 'D:/Major Projects/media-sdk/packages/media-core/dist/index.d.ts' does not exist.
+Loading module as file / folder, candidate module location 'D:/Major Projects/media-sdk/packages/media-core/dist/index.d.ts', target file types: TypeScript, JavaScript, Declaration, JSON.
+Directory 'D:/Major Projects/media-sdk/packages/media-core/dist' does not exist, skipping all lookups in it.
+File 'D:/Major Projects/media-sdk/packages/media-native/src/package.json' does not exist according to earlier cached lookups.
+File 'D:/Major Projects/media-sdk/packages/media-native/package.json' exists according to earlier cached lookups.
+Loading module '@media-sdk/core' from 'node_modules' folder, target file types: TypeScript, JavaScript, Declaration, JSON.
+Searching all ancestor node_modules directories for preferred extensions: TypeScript, Declaration.
+Directory 'D:/Major Projects/media-sdk/packages/media-native/src/node_modules' does not exist, skipping all lookups in it.
+Directory 'D:/Major Projects/media-sdk/packages/media-native/node_modules/@types' does not exist, skipping all lookups in it.
+Directory 'D:/Major Projects/media-sdk/packages/node_modules' does not exist, skipping all lookups in it.
+Found 'package.json' at 'D:/Major Projects/media-sdk/node_modules/@media-sdk/core/package.json'.
+Entering conditional exports.
+Matched 'exports' condition 'types'.
+Using 'exports' subpath '.' with target './dist/index.d.ts'.
+File 'D:/Major Projects/media-sdk/node_modules/@media-sdk/core/dist/index.d.ts' does not exist.
+Failed to resolve under condition 'types'.
+Matched 'exports' condition 'import'.
+Using 'exports' subpath '.' with target './dist/index.js'.
+File name 'D:/Major Projects/media-sdk/node_modules/@media-sdk/core/dist/index.js' has a '.js' extension - stripping it.
+Failed to resolve under condition 'import'.
+Exiting conditional exports.
+Scoped package detected, looking in 'media-sdk__core'
+File 'D:/Major Projects/media-sdk/node_modules/@types/media-sdk__core.d.ts' does not exist.
+Directory 'D:/Major Projects/node_modules' does not exist, skipping all lookups in it.
+Directory 'D:/node_modules' does not exist, skipping all lookups in it.
+Searching all ancestor node_modules directories for fallback extensions: JavaScript, JSON.
+Directory 'D:/Major Projects/media-sdk/packages/media-native/src/node_modules' does not exist, skipping all lookups in it.
+Directory 'D:/Major Projects/media-sdk/packages/node_modules' does not exist, skipping all lookups in it.
+File 'D:/Major Projects/media-sdk/node_modules/@media-sdk/core/package.json' exists according to earlier cached lookups.
+Entering conditional exports.
+Matched 'exports' condition 'types'.
+Using 'exports' subpath '.' with target './dist/index.d.ts'.
+File name 'D:/Major Projects/media-sdk/node_modules/@media-sdk/core/dist/index.d.ts' has a '.d.ts' extension - stripping it.
+Failed to resolve under condition 'types'.
+Matched 'exports' condition 'import'.
+Using 'exports' subpath '.' with target './dist/index.js'.
+File name 'D:/Major Projects/media-sdk/node_modules/@media-sdk/core/dist/index.js' has a '.js' extension - stripping it.
+Failed to resolve under condition 'import'.
+Exiting conditional exports.
+Directory 'D:/Major Projects/node_modules' does not exist, skipping all lookups in it.
+Directory 'D:/node_modules' does not exist, skipping all lookups in it.
+======== Module name '@media-sdk/core' was not resolved. ========
+======== Resolving module 'csstype' from 'D:/Major Projects/media-sdk/node_modules/@types/react/index.d.ts'. ========
+Explicitly specified module resolution kind: 'Bundler'.
+Resolving in CJS mode with conditions 'import', 'types'.
+'paths' option is specified, looking for a pattern to match module name 'csstype'.
+File 'D:/Major Projects/media-sdk/node_modules/@types/react/package.json' exists according to earlier cached lookups.
+Loading module 'csstype' from 'node_modules' folder, target file types: TypeScript, JavaScript, Declaration, JSON.
+Searching all ancestor node_modules directories for preferred extensions: TypeScript, Declaration.
+Directory 'D:/Major Projects/media-sdk/node_modules/@types/react/node_modules' does not exist, skipping all lookups in it.
+Directory 'D:/Major Projects/media-sdk/node_modules/@types/node_modules' does not exist, skipping all lookups in it.
+Found 'package.json' at 'D:/Major Projects/media-sdk/node_modules/csstype/package.json'.
+File 'D:/Major Projects/media-sdk/node_modules/csstype.ts' does not exist.
+File 'D:/Major Projects/media-sdk/node_modules/csstype.tsx' does not exist.
+File 'D:/Major Projects/media-sdk/node_modules/csstype.d.ts' does not exist.
+'package.json' does not have a 'typesVersions' field.
+'package.json' does not have a 'typings' field.
+'package.json' has 'types' field 'index.d.ts' that references 'D:/Major Projects/media-sdk/node_modules/csstype/index.d.ts'.
+File 'D:/Major Projects/media-sdk/node_modules/csstype/index.d.ts' exists - use it as a name resolution result.
+'package.json' does not have a 'peerDependencies' field.
+Resolving real path for 'D:/Major Projects/media-sdk/node_modules/csstype/index.d.ts', result 'D:/Major Projects/media-sdk/node_modules/csstype/index.d.ts'.
+======== Module name 'csstype' was successfully resolved to 'D:/Major Projects/media-sdk/node_modules/csstype/index.d.ts' with Package ID 'csstype/index.d.ts@3.2.3'. ========
+======== Resolving module './MediaProvider.js' from 'D:/Major Projects/media-sdk/packages/media-native/src/index.ts'. ========
+Explicitly specified module resolution kind: 'Bundler'.
+Resolving in CJS mode with conditions 'import', 'types'.
+Loading module as file / folder, candidate module location 'D:/Major Projects/media-sdk/packages/media-native/src/MediaProvider.js', target file types: TypeScript, JavaScript, Declaration, JSON.
+File name 'D:/Major Projects/media-sdk/packages/media-native/src/MediaProvider.js' has a '.js' extension - stripping it.
+File 'D:/Major Projects/media-sdk/packages/media-native/src/MediaProvider.ts' does not exist.
+File 'D:/Major Projects/media-sdk/packages/media-native/src/MediaProvider.tsx' exists - use it as a name resolution result.
+======== Module name './MediaProvider.js' was successfully resolved to 'D:/Major Projects/media-sdk/packages/media-native/src/MediaProvider.tsx'. ========
+======== Resolving module './useMediaSearch.js' from 'D:/Major Projects/media-sdk/packages/media-native/src/index.ts'. ========
+Explicitly specified module resolution kind: 'Bundler'.
+Resolving in CJS mode with conditions 'import', 'types'.
+Loading module as file / folder, candidate module location 'D:/Major Projects/media-sdk/packages/media-native/src/useMediaSearch.js', target file types: TypeScript, JavaScript, Declaration, JSON.
+File name 'D:/Major Projects/media-sdk/packages/media-native/src/useMediaSearch.js' has a '.js' extension - stripping it.
+File 'D:/Major Projects/media-sdk/packages/media-native/src/useMediaSearch.ts' exists - use it as a name resolution result.
+======== Module name './useMediaSearch.js' was successfully resolved to 'D:/Major Projects/media-sdk/packages/media-native/src/useMediaSearch.ts'. ========
+======== Resolving module './useMediaEvents.js' from 'D:/Major Projects/media-sdk/packages/media-native/src/index.ts'. ========
+Explicitly specified module resolution kind: 'Bundler'.
+Resolving in CJS mode with conditions 'import', 'types'.
+Loading module as file / folder, candidate module location 'D:/Major Projects/media-sdk/packages/media-native/src/useMediaEvents.js', target file types: TypeScript, JavaScript, Declaration, JSON.
+File name 'D:/Major Projects/media-sdk/packages/media-native/src/useMediaEvents.js' has a '.js' extension - stripping it.
+File 'D:/Major Projects/media-sdk/packages/media-native/src/useMediaEvents.ts' exists - use it as a name resolution result.
+======== Module name './useMediaEvents.js' was successfully resolved to 'D:/Major Projects/media-sdk/packages/media-native/src/useMediaEvents.ts'. ========
+======== Resolving module './MediaProvider.js' from 'D:/Major Projects/media-sdk/packages/media-native/src/index.ts'. ========
+Explicitly specified module resolution kind: 'Bundler'.
+Resolving in CJS mode with conditions 'import', 'types'.
+Loading module as file / folder, candidate module location 'D:/Major Projects/media-sdk/packages/media-native/src/MediaProvider.js', target file types: TypeScript, JavaScript, Declaration, JSON.
+File name 'D:/Major Projects/media-sdk/packages/media-native/src/MediaProvider.js' has a '.js' extension - stripping it.
+File 'D:/Major Projects/media-sdk/packages/media-native/src/MediaProvider.ts' does not exist.
+File 'D:/Major Projects/media-sdk/packages/media-native/src/MediaProvider.tsx' exists - use it as a name resolution result.
+======== Module name './MediaProvider.js' was successfully resolved to 'D:/Major Projects/media-sdk/packages/media-native/src/MediaProvider.tsx'. ========
+======== Resolving module './useMediaSearch.js' from 'D:/Major Projects/media-sdk/packages/media-native/src/index.ts'. ========
+Explicitly specified module resolution kind: 'Bundler'.
+Resolving in CJS mode with conditions 'import', 'types'.
+Loading module as file / folder, candidate module location 'D:/Major Projects/media-sdk/packages/media-native/src/useMediaSearch.js', target file types: TypeScript, JavaScript, Declaration, JSON.
+File name 'D:/Major Projects/media-sdk/packages/media-native/src/useMediaSearch.js' has a '.js' extension - stripping it.
+File 'D:/Major Projects/media-sdk/packages/media-native/src/useMediaSearch.ts' exists - use it as a name resolution result.
+======== Module name './useMediaSearch.js' was successfully resolved to 'D:/Major Projects/media-sdk/packages/media-native/src/useMediaSearch.ts'. ========
+======== Resolving module 'react/jsx-runtime' from 'D:/Major Projects/media-sdk/packages/media-native/src/MediaProvider.tsx'. ========
+Explicitly specified module resolution kind: 'Bundler'.
+Resolving in CJS mode with conditions 'import', 'types'.
+'paths' option is specified, looking for a pattern to match module name 'react/jsx-runtime'.
+File 'D:/Major Projects/media-sdk/packages/media-native/src/package.json' does not exist according to earlier cached lookups.
+File 'D:/Major Projects/media-sdk/packages/media-native/package.json' exists according to earlier cached lookups.
+Loading module 'react/jsx-runtime' from 'node_modules' folder, target file types: TypeScript, JavaScript, Declaration, JSON.
+Searching all ancestor node_modules directories for preferred extensions: TypeScript, Declaration.
+Directory 'D:/Major Projects/media-sdk/packages/media-native/src/node_modules' does not exist, skipping all lookups in it.
+Directory 'D:/Major Projects/media-sdk/packages/media-native/node_modules/@types' does not exist, skipping all lookups in it.
+Directory 'D:/Major Projects/media-sdk/packages/node_modules' does not exist, skipping all lookups in it.
+Found 'package.json' at 'D:/Major Projects/media-sdk/node_modules/react/package.json'.
+Entering conditional exports.
+Saw non-matching condition 'react-server'.
+Matched 'exports' condition 'default'.
+Using 'exports' subpath './jsx-runtime' with target './jsx-runtime.js'.
+File name 'D:/Major Projects/media-sdk/node_modules/react/jsx-runtime.js' has a '.js' extension - stripping it.
+File 'D:/Major Projects/media-sdk/node_modules/react/jsx-runtime.ts' does not exist.
+File 'D:/Major Projects/media-sdk/node_modules/react/jsx-runtime.tsx' does not exist.
+File 'D:/Major Projects/media-sdk/node_modules/react/jsx-runtime.d.ts' does not exist.
+Failed to resolve under condition 'default'.
+Exiting conditional exports.
+Export specifier './jsx-runtime' does not exist in package.json scope at path 'D:/Major Projects/media-sdk/node_modules/react'.
+Found 'package.json' at 'D:/Major Projects/media-sdk/node_modules/@types/react/package.json'.
+Entering conditional exports.
+Saw non-matching condition 'types@<=5.0'.
+Matched 'exports' condition 'types'.
+Entering conditional exports.
+Matched 'exports' condition 'default'.
+Using 'exports' subpath './jsx-runtime' with target './jsx-runtime.d.ts'.
+File 'D:/Major Projects/media-sdk/node_modules/@types/react/jsx-runtime.d.ts' exists - use it as a name resolution result.
+Resolved under condition 'default'.
+Exiting conditional exports.
+Resolved under condition 'types'.
+Exiting conditional exports.
+Resolving real path for 'D:/Major Projects/media-sdk/node_modules/@types/react/jsx-runtime.d.ts', result 'D:/Major Projects/media-sdk/node_modules/@types/react/jsx-runtime.d.ts'.
+======== Module name 'react/jsx-runtime' was successfully resolved to 'D:/Major Projects/media-sdk/node_modules/@types/react/jsx-runtime.d.ts' with Package ID '@types/react/jsx-runtime.d.ts@19.2.18'. ========
+======== Resolving module 'react' from 'D:/Major Projects/media-sdk/packages/media-native/src/MediaProvider.tsx'. ========
+Explicitly specified module resolution kind: 'Bundler'.
+Resolving in CJS mode with conditions 'import', 'types'.
+'paths' option is specified, looking for a pattern to match module name 'react'.
+File 'D:/Major Projects/media-sdk/packages/media-native/src/package.json' does not exist according to earlier cached lookups.
+File 'D:/Major Projects/media-sdk/packages/media-native/package.json' exists according to earlier cached lookups.
+Loading module 'react' from 'node_modules' folder, target file types: TypeScript, JavaScript, Declaration, JSON.
+Searching all ancestor node_modules directories for preferred extensions: TypeScript, Declaration.
+Directory 'D:/Major Projects/media-sdk/packages/media-native/src/node_modules' does not exist, skipping all lookups in it.
+File 'D:/Major Projects/media-sdk/packages/media-native/node_modules/react.ts' does not exist.
+File 'D:/Major Projects/media-sdk/packages/media-native/node_modules/react.tsx' does not exist.
+File 'D:/Major Projects/media-sdk/packages/media-native/node_modules/react.d.ts' does not exist.
+Directory 'D:/Major Projects/media-sdk/packages/media-native/node_modules/@types' does not exist, skipping all lookups in it.
+Directory 'D:/Major Projects/media-sdk/packages/node_modules' does not exist, skipping all lookups in it.
+File 'D:/Major Projects/media-sdk/node_modules/react/package.json' exists according to earlier cached lookups.
+Entering conditional exports.
+Saw non-matching condition 'react-server'.
+Matched 'exports' condition 'default'.
+Using 'exports' subpath '.' with target './index.js'.
+File name 'D:/Major Projects/media-sdk/node_modules/react/index.js' has a '.js' extension - stripping it.
+File 'D:/Major Projects/media-sdk/node_modules/react/index.ts' does not exist.
+File 'D:/Major Projects/media-sdk/node_modules/react/index.tsx' does not exist.
+File 'D:/Major Projects/media-sdk/node_modules/react/index.d.ts' does not exist.
+Failed to resolve under condition 'default'.
+Exiting conditional exports.
+File 'D:/Major Projects/media-sdk/node_modules/@types/react/package.json' exists according to earlier cached lookups.
+Entering conditional exports.
+Saw non-matching condition 'types@<=5.0'.
+Matched 'exports' condition 'types'.
+Entering conditional exports.
+Matched 'exports' condition 'default'.
+Using 'exports' subpath '.' with target './index.d.ts'.
+File 'D:/Major Projects/media-sdk/node_modules/@types/react/index.d.ts' exists - use it as a name resolution result.
+Resolved under condition 'default'.
+Exiting conditional exports.
+Resolved under condition 'types'.
+Exiting conditional exports.
+Resolving real path for 'D:/Major Projects/media-sdk/node_modules/@types/react/index.d.ts', result 'D:/Major Projects/media-sdk/node_modules/@types/react/index.d.ts'.
+======== Module name 'react' was successfully resolved to 'D:/Major Projects/media-sdk/node_modules/@types/react/index.d.ts' with Package ID '@types/react/index.d.ts@19.2.18'. ========
+======== Resolving module 'react' from 'D:/Major Projects/media-sdk/packages/media-native/src/MediaProvider.tsx'. ========
+Explicitly specified module resolution kind: 'Bundler'.
+Resolving in CJS mode with conditions 'import', 'types'.
+'paths' option is specified, looking for a pattern to match module name 'react'.
+File 'D:/Major Projects/media-sdk/packages/media-native/src/package.json' does not exist according to earlier cached lookups.
+File 'D:/Major Projects/media-sdk/packages/media-native/package.json' exists according to earlier cached lookups.
+Loading module 'react' from 'node_modules' folder, target file types: TypeScript, JavaScript, Declaration, JSON.
+Searching all ancestor node_modules directories for preferred extensions: TypeScript, Declaration.
+Directory 'D:/Major Projects/media-sdk/packages/media-native/src/node_modules' does not exist, skipping all lookups in it.
+File 'D:/Major Projects/media-sdk/packages/media-native/node_modules/react.ts' does not exist.
+File 'D:/Major Projects/media-sdk/packages/media-native/node_modules/react.tsx' does not exist.
+File 'D:/Major Projects/media-sdk/packages/media-native/node_modules/react.d.ts' does not exist.
+Directory 'D:/Major Projects/media-sdk/packages/media-native/node_modules/@types' does not exist, skipping all lookups in it.
+Directory 'D:/Major Projects/media-sdk/packages/node_modules' does not exist, skipping all lookups in it.
+File 'D:/Major Projects/media-sdk/node_modules/react/package.json' exists according to earlier cached lookups.
+Entering conditional exports.
+Saw non-matching condition 'react-server'.
+Matched 'exports' condition 'default'.
+Using 'exports' subpath '.' with target './index.js'.
+File name 'D:/Major Projects/media-sdk/node_modules/react/index.js' has a '.js' extension - stripping it.
+File 'D:/Major Projects/media-sdk/node_modules/react/index.ts' does not exist.
+File 'D:/Major Projects/media-sdk/node_modules/react/index.tsx' does not exist.
+File 'D:/Major Projects/media-sdk/node_modules/react/index.d.ts' does not exist.
+Failed to resolve under condition 'default'.
+Exiting conditional exports.
+File 'D:/Major Projects/media-sdk/node_modules/@types/react/package.json' exists according to earlier cached lookups.
+Entering conditional exports.
+Saw non-matching condition 'types@<=5.0'.
+Matched 'exports' condition 'types'.
+Entering conditional exports.
+Matched 'exports' condition 'default'.
+Using 'exports' subpath '.' with target './index.d.ts'.
+File 'D:/Major Projects/media-sdk/node_modules/@types/react/index.d.ts' exists - use it as a name resolution result.
+Resolved under condition 'default'.
+Exiting conditional exports.
+Resolved under condition 'types'.
+Exiting conditional exports.
+Resolving real path for 'D:/Major Projects/media-sdk/node_modules/@types/react/index.d.ts', result 'D:/Major Projects/media-sdk/node_modules/@types/react/index.d.ts'.
+======== Module name 'react' was successfully resolved to 'D:/Major Projects/media-sdk/node_modules/@types/react/index.d.ts' with Package ID '@types/react/index.d.ts@19.2.18'. ========
+======== Resolving module '@media-sdk/core' from 'D:/Major Projects/media-sdk/packages/media-native/src/MediaProvider.tsx'. ========
+Explicitly specified module resolution kind: 'Bundler'.
+Resolving in CJS mode with conditions 'import', 'types'.
+'paths' option is specified, looking for a pattern to match module name '@media-sdk/core'.
+Module name '@media-sdk/core', matched pattern '@media-sdk/core'.
+Trying substitution '../media-core/dist/index.d.ts', candidate module location: '../media-core/dist/index.d.ts'.
+File 'D:/Major Projects/media-sdk/packages/media-core/dist/index.d.ts' does not exist.
+Loading module as file / folder, candidate module location 'D:/Major Projects/media-sdk/packages/media-core/dist/index.d.ts', target file types: TypeScript, JavaScript, Declaration, JSON.
+Directory 'D:/Major Projects/media-sdk/packages/media-core/dist' does not exist, skipping all lookups in it.
+File 'D:/Major Projects/media-sdk/packages/media-native/src/package.json' does not exist according to earlier cached lookups.
+File 'D:/Major Projects/media-sdk/packages/media-native/package.json' exists according to earlier cached lookups.
+Loading module '@media-sdk/core' from 'node_modules' folder, target file types: TypeScript, JavaScript, Declaration, JSON.
+Searching all ancestor node_modules directories for preferred extensions: TypeScript, Declaration.
+Directory 'D:/Major Projects/media-sdk/packages/media-native/src/node_modules' does not exist, skipping all lookups in it.
+Directory 'D:/Major Projects/media-sdk/packages/media-native/node_modules/@types' does not exist, skipping all lookups in it.
+Directory 'D:/Major Projects/media-sdk/packages/node_modules' does not exist, skipping all lookups in it.
+Found 'package.json' at 'D:/Major Projects/media-sdk/node_modules/@media-sdk/core/package.json'.
+Entering conditional exports.
+Matched 'exports' condition 'types'.
+Using 'exports' subpath '.' with target './dist/index.d.ts'.
+File 'D:/Major Projects/media-sdk/node_modules/@media-sdk/core/dist/index.d.ts' does not exist.
+Failed to resolve under condition 'types'.
+Matched 'exports' condition 'import'.
+Using 'exports' subpath '.' with target './dist/index.js'.
+File name 'D:/Major Projects/media-sdk/node_modules/@media-sdk/core/dist/index.js' has a '.js' extension - stripping it.
+Failed to resolve under condition 'import'.
+Exiting conditional exports.
+Scoped package detected, looking in 'media-sdk__core'
+File 'D:/Major Projects/media-sdk/node_modules/@types/media-sdk__core.d.ts' does not exist.
+Directory 'D:/Major Projects/node_modules' does not exist, skipping all lookups in it.
+Directory 'D:/node_modules' does not exist, skipping all lookups in it.
+Searching all ancestor node_modules directories for fallback extensions: JavaScript, JSON.
+Directory 'D:/Major Projects/media-sdk/packages/media-native/src/node_modules' does not exist, skipping all lookups in it.
+Directory 'D:/Major Projects/media-sdk/packages/node_modules' does not exist, skipping all lookups in it.
+File 'D:/Major Projects/media-sdk/node_modules/@media-sdk/core/package.json' exists according to earlier cached lookups.
+Entering conditional exports.
+Matched 'exports' condition 'types'.
+Using 'exports' subpath '.' with target './dist/index.d.ts'.
+File name 'D:/Major Projects/media-sdk/node_modules/@media-sdk/core/dist/index.d.ts' has a '.d.ts' extension - stripping it.
+Failed to resolve under condition 'types'.
+Matched 'exports' condition 'import'.
+Using 'exports' subpath '.' with target './dist/index.js'.
+File name 'D:/Major Projects/media-sdk/node_modules/@media-sdk/core/dist/index.js' has a '.js' extension - stripping it.
+Failed to resolve under condition 'import'.
+Exiting conditional exports.
+Directory 'D:/Major Projects/node_modules' does not exist, skipping all lookups in it.
+Directory 'D:/node_modules' does not exist, skipping all lookups in it.
+======== Module name '@media-sdk/core' was not resolved. ========
+======== Resolving module './context.js' from 'D:/Major Projects/media-sdk/packages/media-native/src/MediaProvider.tsx'. ========
+Explicitly specified module resolution kind: 'Bundler'.
+Resolving in CJS mode with conditions 'import', 'types'.
+Loading module as file / folder, candidate module location 'D:/Major Projects/media-sdk/packages/media-native/src/context.js', target file types: TypeScript, JavaScript, Declaration, JSON.
+File name 'D:/Major Projects/media-sdk/packages/media-native/src/context.js' has a '.js' extension - stripping it.
+File 'D:/Major Projects/media-sdk/packages/media-native/src/context.ts' exists - use it as a name resolution result.
+======== Module name './context.js' was successfully resolved to 'D:/Major Projects/media-sdk/packages/media-native/src/context.ts'. ========
+======== Resolving module './' from 'D:/Major Projects/media-sdk/node_modules/@types/react/jsx-runtime.d.ts'. ========
+Explicitly specified module resolution kind: 'Bundler'.
+Resolving in CJS mode with conditions 'import', 'types'.
+Loading module as file / folder, candidate module location 'D:/Major Projects/media-sdk/node_modules/@types/react/', target file types: TypeScript, JavaScript, Declaration, JSON.
+File 'D:/Major Projects/media-sdk/node_modules/@types/react/package.json' exists according to earlier cached lookups.
+'package.json' has a 'typesVersions' field with version-specific path mappings.
+'package.json' does not have a 'typesVersions' entry that matches version '7.0'.
+'package.json' does not have a 'typings' field.
+'package.json' has 'types' field 'index.d.ts' that references 'D:/Major Projects/media-sdk/node_modules/@types/react/index.d.ts'.
+File 'D:/Major Projects/media-sdk/node_modules/@types/react/index.d.ts' exists - use it as a name resolution result.
+======== Module name './' was successfully resolved to 'D:/Major Projects/media-sdk/node_modules/@types/react/index.d.ts'. ========
+======== Resolving module './' from 'D:/Major Projects/media-sdk/node_modules/@types/react/jsx-runtime.d.ts'. ========
+Explicitly specified module resolution kind: 'Bundler'.
+Resolving in CJS mode with conditions 'import', 'types'.
+Loading module as file / folder, candidate module location 'D:/Major Projects/media-sdk/node_modules/@types/react/', target file types: TypeScript, JavaScript, Declaration, JSON.
+File 'D:/Major Projects/media-sdk/node_modules/@types/react/package.json' exists according to earlier cached lookups.
+'package.json' has a 'typesVersions' field with version-specific path mappings.
+'package.json' does not have a 'typesVersions' entry that matches version '7.0'.
+'package.json' does not have a 'typings' field.
+'package.json' has 'types' field 'index.d.ts' that references 'D:/Major Projects/media-sdk/node_modules/@types/react/index.d.ts'.
+File 'D:/Major Projects/media-sdk/node_modules/@types/react/index.d.ts' exists - use it as a name resolution result.
+======== Module name './' was successfully resolved to 'D:/Major Projects/media-sdk/node_modules/@types/react/index.d.ts'. ========
+======== Resolving module 'react' from 'D:/Major Projects/media-sdk/packages/media-native/src/useMediaSearch.ts'. ========
+Explicitly specified module resolution kind: 'Bundler'.
+Resolving in CJS mode with conditions 'import', 'types'.
+'paths' option is specified, looking for a pattern to match module name 'react'.
+File 'D:/Major Projects/media-sdk/packages/media-native/src/package.json' does not exist according to earlier cached lookups.
+File 'D:/Major Projects/media-sdk/packages/media-native/package.json' exists according to earlier cached lookups.
+Loading module 'react' from 'node_modules' folder, target file types: TypeScript, JavaScript, Declaration, JSON.
+Searching all ancestor node_modules directories for preferred extensions: TypeScript, Declaration.
+Directory 'D:/Major Projects/media-sdk/packages/media-native/src/node_modules' does not exist, skipping all lookups in it.
+File 'D:/Major Projects/media-sdk/packages/media-native/node_modules/react.ts' does not exist.
+File 'D:/Major Projects/media-sdk/packages/media-native/node_modules/react.tsx' does not exist.
+File 'D:/Major Projects/media-sdk/packages/media-native/node_modules/react.d.ts' does not exist.
+Directory 'D:/Major Projects/media-sdk/packages/media-native/node_modules/@types' does not exist, skipping all lookups in it.
+Directory 'D:/Major Projects/media-sdk/packages/node_modules' does not exist, skipping all lookups in it.
+File 'D:/Major Projects/media-sdk/node_modules/react/package.json' exists according to earlier cached lookups.
+Entering conditional exports.
+Saw non-matching condition 'react-server'.
+Matched 'exports' condition 'default'.
+Using 'exports' subpath '.' with target './index.js'.
+File name 'D:/Major Projects/media-sdk/node_modules/react/index.js' has a '.js' extension - stripping it.
+File 'D:/Major Projects/media-sdk/node_modules/react/index.ts' does not exist.
+File 'D:/Major Projects/media-sdk/node_modules/react/index.tsx' does not exist.
+File 'D:/Major Projects/media-sdk/node_modules/react/index.d.ts' does not exist.
+Failed to resolve under condition 'default'.
+Exiting conditional exports.
+Found 'package.json' at 'D:/Major Projects/media-sdk/node_modules/@types/react/package.json'.
+Entering conditional exports.
+Saw non-matching condition 'types@<=5.0'.
+Matched 'exports' condition 'types'.
+Entering conditional exports.
+Matched 'exports' condition 'default'.
+Using 'exports' subpath '.' with target './index.d.ts'.
+File 'D:/Major Projects/media-sdk/node_modules/@types/react/index.d.ts' exists - use it as a name resolution result.
+Resolved under condition 'default'.
+Exiting conditional exports.
+Resolved under condition 'types'.
+Exiting conditional exports.
+Resolving real path for 'D:/Major Projects/media-sdk/node_modules/@types/react/index.d.ts', result 'D:/Major Projects/media-sdk/node_modules/@types/react/index.d.ts'.
+======== Module name 'react' was successfully resolved to 'D:/Major Projects/media-sdk/node_modules/@types/react/index.d.ts' with Package ID '@types/react/index.d.ts@19.2.18'. ========
+======== Resolving module '@media-sdk/core' from 'D:/Major Projects/media-sdk/packages/media-native/src/useMediaSearch.ts'. ========
+Explicitly specified module resolution kind: 'Bundler'.
+Resolving in CJS mode with conditions 'import', 'types'.
+'paths' option is specified, looking for a pattern to match module name '@media-sdk/core'.
+Module name '@media-sdk/core', matched pattern '@media-sdk/core'.
+Trying substitution '../media-core/dist/index.d.ts', candidate module location: '../media-core/dist/index.d.ts'.
+File 'D:/Major Projects/media-sdk/packages/media-core/dist/index.d.ts' does not exist.
+Loading module as file / folder, candidate module location 'D:/Major Projects/media-sdk/packages/media-core/dist/index.d.ts', target file types: TypeScript, JavaScript, Declaration, JSON.
+Directory 'D:/Major Projects/media-sdk/packages/media-core/dist' does not exist, skipping all lookups in it.
+File 'D:/Major Projects/media-sdk/packages/media-native/src/package.json' does not exist according to earlier cached lookups.
+File 'D:/Major Projects/media-sdk/packages/media-native/package.json' exists according to earlier cached lookups.
+Loading module '@media-sdk/core' from 'node_modules' folder, target file types: TypeScript, JavaScript, Declaration, JSON.
+Searching all ancestor node_modules directories for preferred extensions: TypeScript, Declaration.
+Directory 'D:/Major Projects/media-sdk/packages/media-native/src/node_modules' does not exist, skipping all lookups in it.
+Directory 'D:/Major Projects/media-sdk/packages/media-native/node_modules/@types' does not exist, skipping all lookups in it.
+Directory 'D:/Major Projects/media-sdk/packages/node_modules' does not exist, skipping all lookups in it.
+Found 'package.json' at 'D:/Major Projects/media-sdk/node_modules/@media-sdk/core/package.json'.
+Entering conditional exports.
+Matched 'exports' condition 'types'.
+Using 'exports' subpath '.' with target './dist/index.d.ts'.
+File 'D:/Major Projects/media-sdk/node_modules/@media-sdk/core/dist/index.d.ts' does not exist.
+Failed to resolve under condition 'types'.
+Matched 'exports' condition 'import'.
+Using 'exports' subpath '.' with target './dist/index.js'.
+File name 'D:/Major Projects/media-sdk/node_modules/@media-sdk/core/dist/index.js' has a '.js' extension - stripping it.
+Failed to resolve under condition 'import'.
+Exiting conditional exports.
+Scoped package detected, looking in 'media-sdk__core'
+File 'D:/Major Projects/media-sdk/node_modules/@types/media-sdk__core.d.ts' does not exist.
+Directory 'D:/Major Projects/node_modules' does not exist, skipping all lookups in it.
+Directory 'D:/node_modules' does not exist, skipping all lookups in it.
+Searching all ancestor node_modules directories for fallback extensions: JavaScript, JSON.
+Directory 'D:/Major Projects/media-sdk/packages/media-native/src/node_modules' does not exist, skipping all lookups in it.
+Directory 'D:/Major Projects/media-sdk/packages/node_modules' does not exist, skipping all lookups in it.
+File 'D:/Major Projects/media-sdk/node_modules/@media-sdk/core/package.json' exists according to earlier cached lookups.
+Entering conditional exports.
+Matched 'exports' condition 'types'.
+Using 'exports' subpath '.' with target './dist/index.d.ts'.
+File name 'D:/Major Projects/media-sdk/node_modules/@media-sdk/core/dist/index.d.ts' has a '.d.ts' extension - stripping it.
+Failed to resolve under condition 'types'.
+Matched 'exports' condition 'import'.
+Using 'exports' subpath '.' with target './dist/index.js'.
+File name 'D:/Major Projects/media-sdk/node_modules/@media-sdk/core/dist/index.js' has a '.js' extension - stripping it.
+Failed to resolve under condition 'import'.
+Exiting conditional exports.
+Directory 'D:/Major Projects/node_modules' does not exist, skipping all lookups in it.
+Directory 'D:/node_modules' does not exist, skipping all lookups in it.
+======== Module name '@media-sdk/core' was not resolved. ========
+======== Resolving module './context.js' from 'D:/Major Projects/media-sdk/packages/media-native/src/useMediaSearch.ts'. ========
+Explicitly specified module resolution kind: 'Bundler'.
+Resolving in CJS mode with conditions 'import', 'types'.
+Loading module as file / folder, candidate module location 'D:/Major Projects/media-sdk/packages/media-native/src/context.js', target file types: TypeScript, JavaScript, Declaration, JSON.
+File name 'D:/Major Projects/media-sdk/packages/media-native/src/context.js' has a '.js' extension - stripping it.
+File 'D:/Major Projects/media-sdk/packages/media-native/src/context.ts' exists - use it as a name resolution result.
+======== Module name './context.js' was successfully resolved to 'D:/Major Projects/media-sdk/packages/media-native/src/context.ts'. ========
+======== Resolving module 'react' from 'D:/Major Projects/media-sdk/packages/media-native/src/useMediaEvents.ts'. ========
+Explicitly specified module resolution kind: 'Bundler'.
+Resolving in CJS mode with conditions 'import', 'types'.
+'paths' option is specified, looking for a pattern to match module name 'react'.
+File 'D:/Major Projects/media-sdk/packages/media-native/src/package.json' does not exist according to earlier cached lookups.
+File 'D:/Major Projects/media-sdk/packages/media-native/package.json' exists according to earlier cached lookups.
+Loading module 'react' from 'node_modules' folder, target file types: TypeScript, JavaScript, Declaration, JSON.
+Searching all ancestor node_modules directories for preferred extensions: TypeScript, Declaration.
+Directory 'D:/Major Projects/media-sdk/packages/media-native/src/node_modules' does not exist, skipping all lookups in it.
+File 'D:/Major Projects/media-sdk/packages/media-native/node_modules/react.ts' does not exist.
+File 'D:/Major Projects/media-sdk/packages/media-native/node_modules/react.tsx' does not exist.
+File 'D:/Major Projects/media-sdk/packages/media-native/node_modules/react.d.ts' does not exist.
+Directory 'D:/Major Projects/media-sdk/packages/media-native/node_modules/@types' does not exist, skipping all lookups in it.
+Directory 'D:/Major Projects/media-sdk/packages/node_modules' does not exist, skipping all lookups in it.
+File 'D:/Major Projects/media-sdk/node_modules/react/package.json' exists according to earlier cached lookups.
+Entering conditional exports.
+Saw non-matching condition 'react-server'.
+Matched 'exports' condition 'default'.
+Using 'exports' subpath '.' with target './index.js'.
+File name 'D:/Major Projects/media-sdk/node_modules/react/index.js' has a '.js' extension - stripping it.
+File 'D:/Major Projects/media-sdk/node_modules/react/index.ts' does not exist.
+File 'D:/Major Projects/media-sdk/node_modules/react/index.tsx' does not exist.
+File 'D:/Major Projects/media-sdk/node_modules/react/index.d.ts' does not exist.
+Failed to resolve under condition 'default'.
+Exiting conditional exports.
+Found 'package.json' at 'D:/Major Projects/media-sdk/node_modules/@types/react/package.json'.
+Entering conditional exports.
+Saw non-matching condition 'types@<=5.0'.
+Matched 'exports' condition 'types'.
+Entering conditional exports.
+Matched 'exports' condition 'default'.
+Using 'exports' subpath '.' with target './index.d.ts'.
+File 'D:/Major Projects/media-sdk/node_modules/@types/react/index.d.ts' exists - use it as a name resolution result.
+Resolved under condition 'default'.
+Exiting conditional exports.
+Resolved under condition 'types'.
+Exiting conditional exports.
+Resolving real path for 'D:/Major Projects/media-sdk/node_modules/@types/react/index.d.ts', result 'D:/Major Projects/media-sdk/node_modules/@types/react/index.d.ts'.
+======== Module name 'react' was successfully resolved to 'D:/Major Projects/media-sdk/node_modules/@types/react/index.d.ts' with Package ID '@types/react/index.d.ts@19.2.18'. ========
+======== Resolving module '@media-sdk/core' from 'D:/Major Projects/media-sdk/packages/media-native/src/useMediaEvents.ts'. ========
+Explicitly specified module resolution kind: 'Bundler'.
+Resolving in CJS mode with conditions 'import', 'types'.
+'paths' option is specified, looking for a pattern to match module name '@media-sdk/core'.
+Module name '@media-sdk/core', matched pattern '@media-sdk/core'.
+Trying substitution '../media-core/dist/index.d.ts', candidate module location: '../media-core/dist/index.d.ts'.
+File 'D:/Major Projects/media-sdk/packages/media-core/dist/index.d.ts' does not exist.
+Loading module as file / folder, candidate module location 'D:/Major Projects/media-sdk/packages/media-core/dist/index.d.ts', target file types: TypeScript, JavaScript, Declaration, JSON.
+Directory 'D:/Major Projects/media-sdk/packages/media-core/dist' does not exist, skipping all lookups in it.
+File 'D:/Major Projects/media-sdk/packages/media-native/src/package.json' does not exist according to earlier cached lookups.
+File 'D:/Major Projects/media-sdk/packages/media-native/package.json' exists according to earlier cached lookups.
+Loading module '@media-sdk/core' from 'node_modules' folder, target file types: TypeScript, JavaScript, Declaration, JSON.
+Searching all ancestor node_modules directories for preferred extensions: TypeScript, Declaration.
+Directory 'D:/Major Projects/media-sdk/packages/media-native/src/node_modules' does not exist, skipping all lookups in it.
+Directory 'D:/Major Projects/media-sdk/packages/media-native/node_modules/@types' does not exist, skipping all lookups in it.
+Directory 'D:/Major Projects/media-sdk/packages/node_modules' does not exist, skipping all lookups in it.
+Found 'package.json' at 'D:/Major Projects/media-sdk/node_modules/@media-sdk/core/package.json'.
+Entering conditional exports.
+Matched 'exports' condition 'types'.
+Using 'exports' subpath '.' with target './dist/index.d.ts'.
+File 'D:/Major Projects/media-sdk/node_modules/@media-sdk/core/dist/index.d.ts' does not exist.
+Failed to resolve under condition 'types'.
+Matched 'exports' condition 'import'.
+Using 'exports' subpath '.' with target './dist/index.js'.
+File name 'D:/Major Projects/media-sdk/node_modules/@media-sdk/core/dist/index.js' has a '.js' extension - stripping it.
+Failed to resolve under condition 'import'.
+Exiting conditional exports.
+Scoped package detected, looking in 'media-sdk__core'
+File 'D:/Major Projects/media-sdk/node_modules/@types/media-sdk__core.d.ts' does not exist.
+Directory 'D:/Major Projects/node_modules' does not exist, skipping all lookups in it.
+Directory 'D:/node_modules' does not exist, skipping all lookups in it.
+Searching all ancestor node_modules directories for fallback extensions: JavaScript, JSON.
+Directory 'D:/Major Projects/media-sdk/packages/media-native/src/node_modules' does not exist, skipping all lookups in it.
+Directory 'D:/Major Projects/media-sdk/packages/node_modules' does not exist, skipping all lookups in it.
+File 'D:/Major Projects/media-sdk/node_modules/@media-sdk/core/package.json' exists according to earlier cached lookups.
+Entering conditional exports.
+Matched 'exports' condition 'types'.
+Using 'exports' subpath '.' with target './dist/index.d.ts'.
+File name 'D:/Major Projects/media-sdk/node_modules/@media-sdk/core/dist/index.d.ts' has a '.d.ts' extension - stripping it.
+Failed to resolve under condition 'types'.
+Matched 'exports' condition 'import'.
+Using 'exports' subpath '.' with target './dist/index.js'.
+File name 'D:/Major Projects/media-sdk/node_modules/@media-sdk/core/dist/index.js' has a '.js' extension - stripping it.
+Failed to resolve under condition 'import'.
+Exiting conditional exports.
+Directory 'D:/Major Projects/node_modules' does not exist, skipping all lookups in it.
+Directory 'D:/node_modules' does not exist, skipping all lookups in it.
+======== Module name '@media-sdk/core' was not resolved. ========
+======== Resolving module './context.js' from 'D:/Major Projects/media-sdk/packages/media-native/src/useMediaEvents.ts'. ========
+Explicitly specified module resolution kind: 'Bundler'.
+Resolving in CJS mode with conditions 'import', 'types'.
+Loading module as file / folder, candidate module location 'D:/Major Projects/media-sdk/packages/media-native/src/context.js', target file types: TypeScript, JavaScript, Declaration, JSON.
+File name 'D:/Major Projects/media-sdk/packages/media-native/src/context.js' has a '.js' extension - stripping it.
+File 'D:/Major Projects/media-sdk/packages/media-native/src/context.ts' exists - use it as a name resolution result.
+======== Module name './context.js' was successfully resolved to 'D:/Major Projects/media-sdk/packages/media-native/src/context.ts'. ========
+======== Resolving type reference directive 'react', containing file 'D:/Major Projects/media-sdk/packages/media-native/__inferred type names__.ts', root directory 'D:/Major Projects/media-sdk/packages/media-native/node_modules/@types,D:/Major Projects/media-sdk/packages/node_modules/@types,D:/Major Projects/media-sdk/node_modules/@types,D:/Major Projects/node_modules/@types,D:/node_modules/@types'. ========
+Resolving with primary search path 'D:/Major Projects/media-sdk/packages/media-native/node_modules/@types, D:/Major Projects/media-sdk/packages/node_modules/@types, D:/Major Projects/media-sdk/node_modules/@types, D:/Major Projects/node_modules/@types, D:/node_modules/@types'.
+Directory 'D:/Major Projects/media-sdk/packages/media-native/node_modules/@types' does not exist, skipping all lookups in it.
+Directory 'D:/Major Projects/media-sdk/packages/node_modules/@types' does not exist, skipping all lookups in it.
+Found 'package.json' at 'D:/Major Projects/media-sdk/node_modules/@types/react/package.json'.
+'package.json' has a 'typesVersions' field with version-specific path mappings.
+'package.json' does not have a 'typesVersions' entry that matches version '7.0'.
+'package.json' does not have a 'typings' field.
+'package.json' has 'types' field 'index.d.ts' that references 'D:/Major Projects/media-sdk/node_modules/@types/react/index.d.ts'.
+File 'D:/Major Projects/media-sdk/node_modules/@types/react/index.d.ts' exists - use it as a name resolution result.
+Resolving real path for 'D:/Major Projects/media-sdk/node_modules/@types/react/index.d.ts', result 'D:/Major Projects/media-sdk/node_modules/@types/react/index.d.ts'.
+======== Type reference directive 'react' was successfully resolved to 'D:/Major Projects/media-sdk/node_modules/@types/react/index.d.ts', primary: true. ========
+src/MediaProvider.tsx(16,8): error TS2307: Cannot find module '@media-sdk/core' or its corresponding type declarations.
+src/context.ts(11,8): error TS2307: Cannot find module '@media-sdk/core' or its corresponding type declarations.
+src/useMediaEvents.ts(10,8): error TS2307: Cannot find module '@media-sdk/core' or its corresponding type declarations.
+src/useMediaSearch.ts(9,8): error TS2307: Cannot find module '@media-sdk/core' or its corresponding type declarations.
