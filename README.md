@@ -459,6 +459,31 @@ npm run dev
 
 ---
 
+## AI-Assisted Development
+
+AI coding tools were used during development for:
+
+- scaffolding package structures
+- TypeScript debugging
+- test generation
+- documentation drafting
+- refactoring suggestions
+
+Architecture decisions, dependency boundaries, SDK contracts,
+and final implementation were reviewed and validated manually.
+
+### AI Skills
+
+Two SKILL.md files were created:
+
+- `skills/media-data-wiring/SKILL.md`
+- `skills/media-components/SKILL.md`
+
+These were used to guide an AI coding assistant while implementing
+the application layer.
+
+---
+
 # 📄 License
 
 MIT License.

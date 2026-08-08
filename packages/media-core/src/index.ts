@@ -50,9 +50,14 @@ export * from "./client/PexelsClient.js";
 export * from "./cache/CacheManager.js";
 
 export * from "./types/media.js";
+
 export type {
-    PexelsPhotoResponse,
-    PexelsPhoto
+  PexelsPhotoResponse,
+  PexelsPhoto,
+  PexelsVideoResponse,
+  PexelsVideo,
+  PexelsVideoFile,
+  PexelsVideoPicture
 } from "./types/pexels.js";
 
 export {

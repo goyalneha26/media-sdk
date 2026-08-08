@@ -1,21 +1,15 @@
-
 export {
-    MediaProvider
+  MediaProvider
 } from "./MediaProvider.js";
 
-
 export {
-    MediaContext,
-    useMediaContext
-} from "./context.js";
-
-
-export {
-    useMediaSearch
+  useMediaSearch
 } from "./hooks/useMediaSearch.js";
 
-
 export {
-    useMediaEvents
+  useMediaEvents
 } from "./hooks/useMediaEvents.js";
 
+export {
+  useMediaVideos
+} from "./hooks/useMediaVideos.js";

@@ -190,32 +190,17 @@ export class AnalyticsManager {
 
 
 
-    public reset():void{
+   public reset(): void {
+    this.stats = {
+        plays: 0,
+        pauses: 0,
+        stops: 0,
+        errors: 0,
+        watchTime: 0,
+        completions: 0
+    };
 
-
-        this.stats = {
-
-
-            plays:1,
-
-            pauses:0,
-
-            stops:1,
-
-            errors:0,
-
-            watchTime:5,
-
-            completions:1
-
-
-        };
-
-
-        this.startTime = null;
-
-
-    }
-
+    this.startTime = null;
+}
 
 }

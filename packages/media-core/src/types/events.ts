@@ -1,5 +1,6 @@
 export type MediaEventType =
-
+    | "view"
+    | "download"
     | "load"
     | "play"
     | "pause"
