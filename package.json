@@ -1,0 +1,21 @@
+{
+  "name": "media-sdk",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build:core && npm run build:native && npm run build:react && npm run build:ui && npm run build:app",
+    "build:core": "npm run build --workspace @media-sdk/core",
+    "build:native": "npm run build --workspace @media-sdk/native",
+    "build:react": "npm run build --workspace @media-sdk/react",
+    "build:ui": "npm run build --workspace @media-sdk/ui-react",
+    "build:app": "npm run build --workspace @media-sdk/app",
+    "dev": "npm run dev --workspace @media-sdk/app"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}
