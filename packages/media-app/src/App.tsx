@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import React, { useState } from "react";
 
 import {
   useMediaSearch,
@@ -126,11 +126,9 @@ function App() {
       );
     })
     .filter(
-      (
-        item
-      ): item is JSX.Element =>
-        item !== null
-    );
+  (item): item is React.ReactElement =>
+    item !== null
+);
 
   const isSearching =
     loading || videosLoading;
