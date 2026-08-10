@@ -13,6 +13,8 @@
     "build:react": "npm run build --workspace @media-sdk/react",
     "build:ui-native": "npm run build --workspace @media-sdk/ui-native",
     "build:ui": "npm run build --workspace @media-sdk/ui-react",
+    "dev:docs": "npm run dev --workspace @media-sdk/ui-docs",
+    "build:docs": "npm run build --workspace @media-sdk/ui-docs",
     "build:app": "npm run build --workspace @media-sdk/app",
     "dev": "npm run dev --workspace @media-sdk/app"
   },
