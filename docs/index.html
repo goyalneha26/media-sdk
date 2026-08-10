@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Media SDK — Components Documentation</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, Arial, sans-serif;
+      background: #0b0b12;
+      color: #f4f4f5;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 48px 24px;
+      border-bottom: 1px solid #292936;
+      background: linear-gradient(135deg, #151022, #0b0b12);
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 24px;
+    }
+
+    h1 {
+      font-size: 42px;
+      margin: 0 0 12px;
+    }
+
+    h2 {
+      margin-top: 48px;
+      font-size: 28px;
+    }
+
+    h3 {
+      margin-top: 32px;
+      font-size: 21px;
+    }
+
+    p {
+      color: #c4c4cc;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 5px 10px;
+      border: 1px solid #39394a;
+      border-radius: 20px;
+      font-size: 13px;
+      margin-right: 6px;
+      color: #cfcfe8;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(11, 11, 18, 0.95);
+      border-bottom: 1px solid #292936;
+      padding: 14px 0;
+    }
+
+    nav a {
+      color: #cfcfe8;
+      text-decoration: none;
+      margin-right: 22px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: white;
+    }
+
+    .card {
+      background: #14141d;
+      border: 1px solid #292936;
+      border-radius: 14px;
+      padding: 24px;
+      margin: 20px 0;
+    }
+
+    code {
+      background: #1c1c28;
+      padding: 3px 6px;
+      border-radius: 5px;
+      color: #ddd6fe;
+    }
+
+    pre {
+      background: #08080d;
+      border: 1px solid #292936;
+      border-radius: 10px;
+      padding: 20px;
+      overflow-x: auto;
+      color: #e4e4e7;
+    }
+
+    .component {
+      border-left: 3px solid #8b5cf6;
+    }
+
+    footer {
+      margin-top: 70px;
+      padding: 30px 0;
+      border-top: 1px solid #292936;
+      color: #888894;
+    }
+
+    ul {
+      color: #c4c4cc;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <span class="badge">TypeScript</span>
+    <span class="badge">React</span>
+    <span class="badge">Headless UI</span>
+
+    <h1>Media SDK Components</h1>
+
+    <p>
+      Headless React UI components for building media experiences with
+      complete consumer control over markup, styling and behavior.
+    </p>
+  </div>
+</header>
+
+<nav>
+  <div class="container">
+    <a href="#overview">Overview</a>
+    <a href="#grid">Grid</a>
+    <a href="#lightbox">Lightbox</a>
+    <a href="#reels">Reel Swiper</a>
+    <a href="#headless">Headless Contract</a>
+    <a href="#accessibility">Accessibility</a>
+  </div>
+</nav>
+
+<main class="container">
+
+  <section id="overview">
+    <h2>Overview</h2>
+
+    <div class="card">
+      <p>
+        <code>@media-sdk/ui-react</code> is an independent,
+        headless React component library.
+      </p>
+
+      <p>
+        Components receive data and callbacks through props and do not
+        communicate with Pexels, media-core, or media-react.
+      </p>
+
+      <ul>
+        <li>Grid</li>
+        <li>Lightbox</li>
+        <li>Reel Swiper</li>
+      </ul>
+    </div>
+
+    <h3>Install</h3>
+
+    <pre><code>npm install @media-sdk/ui-react</code></pre>
+  </section>
+
+
+  <section id="grid">
+    <h2>Grid</h2>
+
+    <div class="card component">
+
+      <p>
+        The Grid component renders a collection of media items.
+        Data fetching remains the responsibility of the consumer.
+      </p>
+
+      <h3>Example</h3>
+
+      <pre><code>import { Grid } from "@media-sdk/ui-react";
+
+&lt;Grid
+  items={photos}
+  getKey={(photo) =&gt; String(photo.id)}
+  renderItem={(photo) =&gt; (
+    &lt;img
+      src={photo.src.medium}
+      alt={photo.alt}
+    /&gt;
+  )}
+  onItemClick={(photo) =&gt; {
+    console.log("Selected:", photo);
+  }}
+/&gt;</code></pre>
+
+      <h3>Responsibilities</h3>
+
+      <ul>
+        <li>Render media collection</li>
+        <li>Generate stable item keys</li>
+        <li>Render consumer-provided markup</li>
+        <li>Expose item interaction callbacks</li>
+        <li>Support load-more/infinite-scroll behavior</li>
+      </ul>
+
+      <h3>Consumer controls</h3>
+
+      <ul>
+        <li>Layout</li>
+        <li>CSS</li>
+        <li>Image presentation</li>
+        <li>Spacing</li>
+        <li>Typography</li>
+        <li>Colors</li>
+      </ul>
+    </div>
+  </section>
+
+
+  <section id="lightbox">
+    <h2>Lightbox</h2>
+
+    <div class="card component">
+
+      <p>
+        Lightbox provides a reusable media overlay while leaving the
+        displayed content completely under consumer control.
+      </p>
+
+      <h3>Example</h3>
+
+      <pre><code>import { Lightbox } from "@media-sdk/ui-react";
+
+&lt;Lightbox
+  open={selectedPhoto !== null}
+  onClose={() =&gt; setSelectedPhoto(null)}
+&gt;
+  {selectedPhoto &amp;&amp; (
+    &lt;img
+      src={selectedPhoto.src.large}
+      alt={selectedPhoto.alt}
+    /&gt;
+  )}
+&lt;/Lightbox&gt;</code></pre>
+
+      <h3>Features</h3>
+
+      <ul>
+        <li>Open/close state controlled by consumer</li>
+        <li>Consumer-provided media content</li>
+        <li>Overlay interaction</li>
+        <li>Keyboard/focus handling on web</li>
+        <li>No Pexels dependency</li>
+      </ul>
+    </div>
+  </section>
+
+
+  <section id="reels">
+    <h2>Reel Swiper</h2>
+
+    <div class="card component">
+
+      <p>
+        Reel Swiper provides vertical snap-style paging and active-item
+        detection for media experiences.
+      </p>
+
+      <h3>Example</h3>
+
+      <pre><code>import { ReelSwiper } from "@media-sdk/ui-react";
+
+&lt;ReelSwiper
+  items={videos.map((video) =&gt; (
+    &lt;video
+      key={video.id}
+      src={video.url}
+      controls
+    /&gt;
+  ))}
+  onActiveChange={(index) =&gt; {
+    console.log("Active item:", index);
+  }}
+/&gt;</code></pre>
+
+      <h3>Features</h3>
+
+      <ul>
+        <li>Vertical media paging</li>
+        <li>Snap behavior</li>
+        <li>Active item detection</li>
+        <li>Consumer-controlled media rendering</li>
+        <li>Works with arbitrary media data</li>
+      </ul>
+    </div>
+  </section>
+
+
+  <section id="headless">
+    <h2>Headless Component Contract</h2>
+
+    <div class="card">
+
+      <p>
+        These components intentionally do not ship application-specific
+        styling.
+      </p>
+
+      <ul>
+        <li>No Pexels API calls</li>
+        <li>No media-core imports</li>
+        <li>No media-react imports</li>
+        <li>No authentication logic</li>
+        <li>No API key handling</li>
+        <li>No application-specific visual design</li>
+      </ul>
+
+      <h3>Architecture</h3>
+
+      <pre><code>Application
+    │
+    ├── @media-sdk/react
+    │        │
+    │        └── @media-sdk/core
+    │
+    └── @media-sdk/ui-react
+             │
+             └── props + callbacks only</code></pre>
+
+    </div>
+  </section>
+
+
+  <section id="accessibility">
+    <h2>Accessibility</h2>
+
+    <div class="card">
+
+      <p>
+        Consumers remain responsible for semantic markup and content
+        presentation while the UI primitives provide interaction behavior.
+      </p>
+
+      <ul>
+        <li>Provide meaningful image alt text</li>
+        <li>Use semantic buttons for interactive controls</li>
+        <li>Provide keyboard-accessible controls</li>
+        <li>Maintain visible focus states</li>
+        <li>Use appropriate labels for media controls</li>
+      </ul>
+
+    </div>
+  </section>
+
+
+  <section>
+    <h2>Related Packages</h2>
+
+    <div class="card">
+
+      <p><code>@media-sdk/core</code> — framework-agnostic media SDK.</p>
+
+      <p><code>@media-sdk/react</code> — React provider and hooks.</p>
+
+      <p><code>@media-sdk/native</code> — React Native bindings.</p>
+
+      <p><code>@media-sdk/ui-native</code> — React Native headless components.</p>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    Media SDK · Components Documentation · Built with TypeScript and React
+  </div>
+</footer>
+
+</body>
+</html>
